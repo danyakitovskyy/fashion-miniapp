@@ -90,3 +90,24 @@ blockquote {
 .screen.active {
   display: block;
 }
+
+.screen {
+  display: none;
+  animation: fade 0.25s ease;
+}
+
+.screen.active {
+  display: block;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
