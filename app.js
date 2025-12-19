@@ -1,15 +1,18 @@
 const tg = window.Telegram.WebApp;
-
-// Расширяем окно на весь экран
 tg.expand();
 
-// Можно получить данные пользователя
-console.log("User:", tg.initDataUnsafe?.user);
+// Навигация
+const buttons = document.querySelectorAll(".bottom-nav button");
+const screens = document.querySelectorAll(".screen");
 
-// Настройка кнопки Telegram (опционально)
-tg.MainButton.setText("Сохранить в избранное");
-tg.MainButton.show();
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const target = btn.dataset.screen;
 
-tg.MainButton.onClick(() => {
-  tg.showAlert("Добавлено в избранное ⭐");
+    screens.forEach(screen => {
+      screen.classList.remove("active");
+    });
+
+    document.getElementById(target).classList.add("active");
+  });
 });

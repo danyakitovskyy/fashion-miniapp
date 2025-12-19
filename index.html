@@ -18,32 +18,43 @@
 
   <main class="content">
 
-    <section class="card">
+  <section id="home" class="screen active">
+    <div class="card">
       <h2>Эпоха дня</h2>
       <p>Японский авангард 1980–1990</p>
-    </section>
+    </div>
+  </section>
 
-    <section class="card">
-      <h2>Цитата</h2>
-      <blockquote>
-        “Clothes are not meant to look good on a hanger.”
-      </blockquote>
-      <span class="author">— Rei Kawakubo</span>
-    </section>
+  <section id="eras" class="screen">
+    <div class="card">
+      <h2>Эпохи</h2>
+      <p>90-е, Y2K, Авангард</p>
+    </div>
+  </section>
 
-    <section class="card">
+  <section id="persons" class="screen">
+    <div class="card">
+      <h2>Персоны</h2>
+      <p>Rei Kawakubo, Margiela</p>
+    </div>
+  </section>
+
+  <section id="archive" class="screen">
+    <div class="card">
       <h2>Архив</h2>
-      <button class="btn">Перейти</button>
-    </section>
+      <p>Интервью, показы, тексты</p>
+    </div>
+  </section> 
 
   </main>
 
   <nav class="bottom-nav">
-    <button>🏛 Эпохи</button>
-    <button>👤 Персоны</button>
-    <button>📚 Архив</button>
-    <button>⭐ Избранное</button>
+    <button data-screen="home">🏠</button>
+    <button data-screen="eras">🏛</button>
+    <button data-screen="persons">👤</button>
+    <button data-screen="archive">📚</button>
   </nav>
+
 
   <script src="app.js"></script>
 </body>
